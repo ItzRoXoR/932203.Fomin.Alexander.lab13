@@ -1,0 +1,18 @@
+﻿@using FominAlexander932203.Models
+@model IEnumerable<Questions>
+@{
+    int i = 0;
+    ViewData["Title"] = "QuizResult";
+}
+
+<h1>@ViewData["Title"]</h1>
+<h2>Right Answers @IdentityMap.rights out @IdentityMap.alls</h2>
+@foreach (Questions a in Model)
+{
+    i++;
+    <div>@i. @a.problem   @a.yanswer</div>
+}
+@{
+    IdentityMap.Up();
+}
+
